@@ -36,6 +36,17 @@ from .logic_validator import (
     get_validation_report
 )
 
+from .config_manager import (
+    ConfigurationManager,
+    ConfigurationManagerError,
+    ConfigurationState,
+    ValidationMode,
+    ValidationLevel,
+    load_and_validate_config,
+    create_configuration_manager,
+    validate_config_file
+)
+
 __all__ = [
     # Schema validation
     'validate_config_schema',
@@ -64,5 +75,15 @@ __all__ = [
     'ValidationSeverity',
     'ConfigurationLogicError',
     'validate_config_logic',
-    'get_validation_report'
+    'get_validation_report',
+    
+    # Configuration management
+    'ConfigurationManager',
+    'ConfigurationManagerError',
+    'ConfigurationState',
+    'ValidationMode',
+    'ValidationLevel',
+    'load_and_validate_config',
+    'create_configuration_manager',
+    'validate_config_file'
 ] 
