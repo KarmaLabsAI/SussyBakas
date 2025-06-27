@@ -26,6 +26,16 @@ from .config_parser import (
     create_config_summary
 )
 
+from .logic_validator import (
+    ConfigurationLogicValidator,
+    ValidationResult,
+    ValidationIssue,
+    ValidationSeverity,
+    ConfigurationLogicError,
+    validate_config_logic,
+    get_validation_report
+)
+
 __all__ = [
     # Schema validation
     'validate_config_schema',
@@ -45,5 +55,14 @@ __all__ = [
     'ConfigParseError',
     'load_config',
     'parse_config_dict',
-    'create_config_summary'
+    'create_config_summary',
+    
+    # Logic validation
+    'ConfigurationLogicValidator',
+    'ValidationResult',
+    'ValidationIssue',
+    'ValidationSeverity',
+    'ConfigurationLogicError',
+    'validate_config_logic',
+    'get_validation_report'
 ] 
