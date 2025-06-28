@@ -35,6 +35,19 @@ from .template_generator import (
     validate_template_config
 )
 
+from .coordinate_system import (
+    GridCoordinateSystem,
+    GridSystemConfig,
+    GridSystemState,
+    CoordinateSystemInfo,
+    CoordinateValidationMode,
+    GridSystemError,
+    create_grid_coordinate_system,
+    verify_coordinate_system_consistency,
+    get_coordinate_system_info,
+    get_coordinate_system_report
+)
+
 __all__ = [
     # Position Calculator (Component 4.1)
     'position_to_coordinates',
@@ -60,5 +73,17 @@ __all__ = [
     'generate_grid_template',
     'create_standard_template',
     'get_template_info',
-    'validate_template_config'
+    'validate_template_config',
+    
+    # Coordinate System (Component 4.4)
+    'GridCoordinateSystem',
+    'GridSystemConfig',
+    'GridSystemState',
+    'CoordinateSystemInfo',
+    'CoordinateValidationMode',
+    'GridSystemError',
+    'create_grid_coordinate_system',
+    'verify_coordinate_system_consistency',
+    'get_coordinate_system_info',
+    'get_coordinate_system_report'
 ] 
