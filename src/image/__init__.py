@@ -2,7 +2,7 @@
 GenConfig Image Processing Engine
 
 This package provides image processing functionality for the GenConfig system,
-including composite image generation, validation, and utilities.
+including composite image generation, validation, utilities, and batch processing.
 """
 
 from .compositor import (
@@ -34,6 +34,20 @@ from .image_utils import (
     ImageProcessingError
 )
 
+from .batch_processor import (
+    BatchImageProcessor,
+    BatchProcessingConfig,
+    BatchProgress,
+    BatchResult,
+    ProgressCallback,
+    ProcessingMode,
+    BatchOperation,
+    BatchProcessingError,
+    batch_resize_images,
+    batch_convert_format,
+    batch_standardize_traits
+)
+
 __all__ = [
     # Compositor exports
     'create_composite',
@@ -59,5 +73,18 @@ __all__ = [
     'get_image_info_utils',
     'standardize_trait_image',
     'batch_process_images',
-    'ImageProcessingError'
+    'ImageProcessingError',
+    
+    # Batch Processor exports
+    'BatchImageProcessor',
+    'BatchProcessingConfig',
+    'BatchProgress',
+    'BatchResult',
+    'ProgressCallback',
+    'ProcessingMode',
+    'BatchOperation',
+    'BatchProcessingError',
+    'batch_resize_images',
+    'batch_convert_format',
+    'batch_standardize_traits'
 ] 
