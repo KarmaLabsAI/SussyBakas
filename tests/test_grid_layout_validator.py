@@ -19,7 +19,7 @@ from typing import Dict, Any
 # Add src to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from grid.layout_validator import (
+from src.grid.layout_validator import (
     GridLayoutValidator,
     GridPositionAssignment,
     GridLayoutError,

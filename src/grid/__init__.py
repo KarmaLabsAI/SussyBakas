@@ -3,7 +3,7 @@ Grid System - 3x3 grid positioning and layout management
 
 This module provides utilities for converting between grid positions (1-9) 
 and grid coordinates (row, col) for the GenConfig 3x3 grid system, as well
-as validating grid layout configurations.
+as validating grid layout configurations and generating reference templates.
 """
 
 from .position_calculator import (
@@ -24,6 +24,17 @@ from .layout_validator import (
     check_position_uniqueness
 )
 
+from .template_generator import (
+    GridTemplateGenerator,
+    GridTemplateDimensions,
+    GridTemplateStyle,
+    GridTemplateError,
+    generate_grid_template,
+    create_standard_template,
+    get_template_info,
+    validate_template_config
+)
+
 __all__ = [
     # Position Calculator (Component 4.1)
     'position_to_coordinates',
@@ -39,5 +50,15 @@ __all__ = [
     'validate_grid_layout',
     'get_grid_layout_report',
     'check_grid_completeness',
-    'check_position_uniqueness'
+    'check_position_uniqueness',
+    
+    # Template Generator (Component 4.3)
+    'GridTemplateGenerator',
+    'GridTemplateDimensions',
+    'GridTemplateStyle',
+    'GridTemplateError',
+    'generate_grid_template',
+    'create_standard_template',
+    'get_template_info',
+    'validate_template_config'
 ] 

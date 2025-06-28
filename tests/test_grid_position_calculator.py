@@ -20,7 +20,7 @@ Testing Strategy:
 import unittest
 from typing import Dict, List, Tuple
 
-from grid.position_calculator import (
+from src.grid.position_calculator import (
     position_to_coordinates,
     coordinates_to_position,
     validate_position,
