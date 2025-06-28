@@ -24,6 +24,16 @@ from .image_validator import (
     ImageValidationError
 )
 
+from .image_utils import (
+    resize_image,
+    convert_image_format,
+    handle_image_transparency,
+    get_image_info as get_image_info_utils,
+    standardize_trait_image,
+    batch_process_images,
+    ImageProcessingError
+)
+
 __all__ = [
     # Compositor exports
     'create_composite',
@@ -40,5 +50,14 @@ __all__ = [
     'ImageValidator',
     'ImageValidationInfo',
     'ImageValidationMode',
-    'ImageValidationError'
+    'ImageValidationError',
+    
+    # Utilities exports
+    'resize_image',
+    'convert_image_format',
+    'handle_image_transparency',
+    'get_image_info_utils',
+    'standardize_trait_image',
+    'batch_process_images',
+    'ImageProcessingError'
 ] 
