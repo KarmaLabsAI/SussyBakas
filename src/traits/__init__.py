@@ -35,6 +35,18 @@ from .asset_loader import (
     get_asset_loader_report
 )
 
+from .metadata_manager import (
+    TraitMetadataManager,
+    TraitMetadata,
+    MetadataError,
+    MetadataSyncMode,
+    MetadataValidationStats,
+    load_trait_metadata,
+    validate_metadata_consistency,
+    sync_metadata,
+    get_metadata_report
+)
+
 __all__ = [
     # Trait Validator
     'TraitFileValidator',
@@ -62,5 +74,16 @@ __all__ = [
     'CacheStrategy',
     'create_asset_loader',
     'load_trait_asset',
-    'get_asset_loader_report'
+    'get_asset_loader_report',
+    
+    # Metadata Manager
+    'TraitMetadataManager',
+    'TraitMetadata',
+    'MetadataError',
+    'MetadataSyncMode',
+    'MetadataValidationStats',
+    'load_trait_metadata',
+    'validate_metadata_consistency',
+    'sync_metadata',
+    'get_metadata_report'
 ]
