@@ -43,6 +43,24 @@ from .distribution_validator import (
     create_distribution_validator,
 )
 
+from .feasibility_checker import (
+    check_collection_feasibility,
+    calculate_max_unique_combinations,
+    is_collection_size_feasible,
+    suggest_optimal_collection_size,
+    get_feasibility_report,
+    CollectionFeasibilityChecker,
+    FeasibilityCheckError,
+    CollectionFeasibilityResult,
+    CombinationSpaceAnalysis,
+    CategoryCombinationAnalysis,
+    FeasibilityWarning,
+    FeasibilityLevel,
+    WarningType,
+    FeasibilityRecommendations,
+    create_feasibility_checker,
+)
+
 __all__ = [
     # Weight Calculator functions
     'calculate_probabilities',
@@ -59,23 +77,39 @@ __all__ = [
     'simulate_generation_accuracy',
     'get_distribution_report',
     
+    # Feasibility Checker functions
+    'check_collection_feasibility',
+    'calculate_max_unique_combinations',
+    'is_collection_size_feasible',
+    'suggest_optimal_collection_size',
+    'get_feasibility_report',
+    
     # Classes
     'WeightCalculator',
     'WeightedRandomSelector',
     'RarityDistributionValidator',
+    'CollectionFeasibilityChecker',
     'SelectionResult',
     'TraitSelectionResult',
     'SelectionStatistics',
     'DistributionValidationResult',
     'TraitDistributionAnalysis',
     'CollectionFeasibilityAnalysis',
+    'CollectionFeasibilityResult',
+    'CombinationSpaceAnalysis',
+    'CategoryCombinationAnalysis',
     'ValidationIssue',
     'ValidationSeverity',
+    'FeasibilityWarning',
+    'FeasibilityLevel',
+    'WarningType',
+    'FeasibilityRecommendations',
     
     # Exceptions
     'WeightCalculationError',
     'RandomSelectionError',
     'DistributionValidationError',
+    'FeasibilityCheckError',
     
     # Utility functions
     'validate_weights',
@@ -84,4 +118,5 @@ __all__ = [
     'create_weight_calculator',
     'create_weighted_random_selector',
     'create_distribution_validator',
+    'create_feasibility_checker',
 ] 
